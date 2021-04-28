@@ -9,9 +9,32 @@
 	src: url('../fonts/doctor-soos.ttf');
 }
 
+@font-face {
+	font-family: 'Milliard';
+	src: url('../fonts/Rene\ Bieder\ \ Milliard\ ExtraLight.woff');
+}
+
+@font-face {
+	font-family: 'MilliardBold';
+	src: url('../fonts/Rene\ Bieder\ \ Milliard\ Medium.woff');
+}
+
+:root {
+	--shadow: 0px 8px 16px 0 rgba(0, 0, 0, 0.2);
+	--light-blue: #b8dbf8;
+	--text-blue: #101693;
+	--background-blue: #105893;
+	--dark-blue: #193e5c;
+}
+
 body {
-	color: #101693;
-	background-color: hsl(207, 80%, 32%);
+	color: var(--text-blue);
+	background-color: var(--background-blue);
+	font-family: Milliard;
+}
+
+b {
+	font-family: MilliardBold;
 }
 
 a {
@@ -29,7 +52,7 @@ a {
 
 .col {
 	flex: 1;
-	box-shadow: 0px 8px 16px 0 rgba(0, 0, 0, 0.2);
+	box-shadow: var(--shadow);
 	border-radius: 10px;
 }
 
@@ -40,17 +63,38 @@ a {
 }
 
 .navLink {
-	font-size: 6rem;
+	font-family: MilliardBold;
+	font-size: 5rem;
 	text-align: center;
-	background-color: #193e5c;
-	color: #b8dbf8;
-	font-family: doctor-soos;
-	padding: 1rem 0em 0em 0em;
+	background-color: var(--dark-blue);
+	color: var(--light-blue);
+	padding: 0.1em 0em 0.2em 0em;
 }
 
 /* About Me */
 
+.aboutMe {
+	display: flex;
+}
+
+.photo {
+	width: 250px;
+	height: 250px;
+	box-shadow: var(--shadow);
+}
+
+.aboutMeText {
+	font-size: 1.9rem;
+	margin: 0.5em 0em 0em 0.5em;
+}
+
 /* Portfolio */
+
+.portfolioText {
+	display: block;
+	font-size: 1.9rem;
+	margin: 0.5em 0em 0em 0.5em;
+}
 
 /* Contact */
 
@@ -71,9 +115,9 @@ a {
 }
 
 .contactText {
-	font-family: doctor-soos;
-	font-size: 4rem;
-	margin: 0.6em 0em 0em 1em;
+	font-family: MilliardBold;
+	font-size: 3.5rem;
+	margin: 0.7em 0em 0em 1em;
 	width: fit-content;
 	height: fit-content;
 }
@@ -100,18 +144,10 @@ a {
 
 .head:hover + .info {
 	visibility: visible;
-	border-left: 3px solid hsl(207, 80%, 32%);
+	border-left: 3px solid #105893;
 	margin-left: 20em;
 }
 
 .pocket {
 	width: fit-content;
-}
-
-.feet {
-	position: absolute;
-	height: 10em;
-	width: 20em;
-	box-shadow: 0px 8px 16px 0 rgba(0, 0, 0, 0.3);
-	border-radius: 100px;
 }
