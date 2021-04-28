@@ -11,7 +11,7 @@ function Homepage() {
             <div className="columns">
                 <div className="col content"> 
                     <div className="aboutMe">
-                        <img className="photo" src={Me} />
+                        <img className="photo" src="{Me}" />
                         <div className="aboutMeText">
                             I'm <b>Ibrahim</b>, a <b>Computer Science</b> student at <b>Queen Mary University of London.</b>
                         </div>
