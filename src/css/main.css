@@ -78,8 +78,8 @@ a {
 }
 
 .photo {
-	width: 230px;
-	height: 230px;
+	width: 210px;
+	height: 210px;
 	box-shadow: var(--shadow);
 }
 
